@@ -1,0 +1,34 @@
+
+# DTOM Account Transactions Response V1
+
+## Structure
+
+`DTOMAccountTransactionsResponseV1`
+
+## Fields
+
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `durationMs` | `bigint \| undefined` | Optional | This value represents the total time in milliseconds that the Platform took to process the request. |
+| `status` | `string \| undefined` | Optional | This is the status of executing the request.&nbsp;A code of ‘Ok’ indicates no errors |
+| `statusDescription` | `string \| undefined` | Optional | This is a plain English description of the status. |
+| `openingBalance` | `number \| undefined` | Optional | Opening balance of the mAccountfor the returned items |
+| `closingBalance` | `number \| undefined` | Optional | Closing balance of the mAccountfor the returned items |
+| `totalDebits` | `number \| undefined` | Optional | Total debits for the returned items |
+| `totalCredits` | `number \| undefined` | Optional | Total credits for the returned items |
+| `items` | [`DTOMAccountTransactionLineItem[] \| undefined`](../../doc/models/dtom-account-transaction-line-item.md) | Optional | an Array of mAccountTransactionLineItem |
+
+## Example (as JSON)
+
+```json
+{
+  "durationMs": 20,
+  "status": "Ok",
+  "statusDescription": "Operation completed successfully",
+  "openingBalance": 0.0,
+  "closingBalance": 25.0,
+  "totalDebits": 25,
+  "totalCredits": 0
+}
+```
+
